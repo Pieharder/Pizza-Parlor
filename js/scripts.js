@@ -1,3 +1,10 @@
+function Pizza(size,toppings) {
+  this.size = size;
+  this.toppings = toppings;
+}
+
+
+
 $(document).ready(function(){
   $("form#pizzaInput").submit(function(event){
     event.preventDefault();

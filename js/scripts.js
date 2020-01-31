@@ -4,32 +4,39 @@ function Pizza(size, sauce, toppings) {
   this.toppings = toppings
 }
 
-Pizza.prototype.size = function() {
-  if (this.size === "small") {
-    this.price += 6;
-  } else if (this.size === "medium") {
-    this.price += 10;
-  } else
-    this.price += 16;
-}
-
-
-Pizza.prototype.pizzaToppings = function () {
-  this.totalToppings = 0
-  for (var i = 0; i < this.toppings.length; i+= 1)
-    this.totalToppings += this.toppings[i]
-    console.log(totalToppings)
-    console.log(this.pizzaToppings)
-}
-
-// Pizza.prototype.price = function() {
-  
+// Pizza.prototype.size = function() {
+//   if (this.size === "small") {
+//     this.price += 6;
+//   } else if (this.size === "medium") {
+//     this.price += 10;
+//   } else
+//     this.price += 16;
 // }
 
 
+Pizza.prototype.selectToppings = function (ingredients) {
+  this.toppings.push(ingredients);
+
+}
+
+Pizza.prototype.price = function() {
+  var totalPrice = 0;
+  if (this.size === "small") {
+    totalPrice += 6;
+  } else if (this.size === "medium") {
+    totalPrice += 10;
+  } else if (this.size === "large") {
+    totalPrice += 16;
+  }
+
+  
+  return totalPrice
+}
 
 
-var customerPizza = new Pizza(pizzaSize, pizzaSauce, pizzaToppings)
+
+
+
 
 
 
@@ -37,11 +44,12 @@ $(document).ready(function(){
   $("form#pizzaInput").submit(function(event){
     event.preventDefault();
     var pizzaSize = $("input:radio[name=pizzaSize]:checked").val();
-    var pizzaSauce = $("input:radio[name=pizzaSize]:checked").val();
+    var pizzaSauce = $("input:radio[name=pizzaSauce]:checked").val();
     var pizzaToppings = [];
-    $("input:checkbox[name=pizzaToppings]:checked").each(function(){
-        var pizzaToppings = $(this).val();
-        inputToppings.push(pizzaToppings);
+    var customerPizza = new Pizza(pizzaSize, pizzaSauce, pizzaToppings);
+    $("input:checkbox[name=pizzaToppings]:checked").each(function() {
+        var selectedToppings = $(this).val();
+        customerPizza.selectToppings(selectedToppings);
       });
       
       
@@ -50,5 +58,3 @@ $(document).ready(function(){
       console.log(pizzaSauce)
     });
   });
-
- 

@@ -1,28 +1,28 @@
-# _BeepBoop_
+# _Pizza Parlor_
 
-#### _This is a webpage designed to accept number inputs and relay the numbers before it starting at zero with a twist._
+#### _This is a webpage designed to accept custom pizza orders from the user._
 
-#### By _**Geoff Goetz**  24 January 2020_
+#### By _**Geoff Goetz**  31 January 2020_
 
 ## Description
 
-_This project is was built with the purpose of accepting user inputs in the form of any number and relaying all whole numbers below it. This project also will replace any number containing a 1, 2 or 3 with 3 different predefined text responses with text response priority given from highest to lowest._
+This project is was built with the purpose of accepting user inputs in the form of pizza size and selection of toppings. After which the user can submit their order and a review of their selections as well as a price will be displayed.
 
 ## Setup/Installation Requirements
 
-* _First, clone this repository to your desktop by navigating to the desktop in the Terminal ("cd desktop") and then entering "git clone https://github.com/Pieharder/BeepBoop"._
-* _Once the directory is cloned to your desktop, open the directory in the Terminal ("cd BeepBoop").
-* _After that open the directory in Visual Studio Code by entering the command "code ." in the Terminal._
-* _Open index.html in a browser of your choice to view the project.(Google Chrome is recomended.)_
+* First, clone this repository to your desktop by navigating to the desktop in the Terminal ("cd desktop") and then entering "git clone _https://github.com/Pieharder/Pizza-Parlor_".
+* Once the directory is cloned to your desktop, open the directory in the Terminal ("cd Pizza-Parlor").
+* After that open the directory in Visual Studio Code by entering the command "code ." in the Terminal.
+* Open **index.html** in a browser of your choice to view the project. (Google Chrome is recomended)
 
 ## Project Specifications
 
 | Behavior   |      Input      |  Output |
 |------------|:---------------:|--------:|
-| | | |
-| | | |
-| | | |
-| | | |
+| Accept user inputs for topping selection via checkboxes | Pepperoni, sausage, olive selected | "Pepperoni, sausage and olives" displayed in list of toppings. |
+| Accept user inputs for pizza size via radio buttons | Medium Size button selected | "Medium(12 in)" size displayed in size section |
+| Accept user submission for finalization of Pizza order via button. | User clicks submit button | Order price and all selections are displayed. |
+
 
 
 ## Technologies Used

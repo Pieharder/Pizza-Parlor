@@ -1,7 +1,7 @@
-function Pizza(size, toppings, price) {
+function Pizza(size, sauce, toppings) {
   this.size = size;
-  this.toppings = toppings;
-  this.price = price;
+  this.sauce = sauce;
+  this.toppings = toppings
 }
 
 Pizza.prototype.size = function() {
@@ -19,28 +19,36 @@ Pizza.prototype.pizzaToppings = function () {
   for (var i = 0; i < this.toppings.length; i+= 1)
     this.totalToppings += this.toppings[i]
     console.log(totalToppings)
-    console.log(pizzaToppings)
+    console.log(this.pizzaToppings)
 }
 
-Pizza.prototype.price = function() {
+// Pizza.prototype.price = function() {
   
-}
+// }
 
 
 
 
-var customerPizza = new Pizza(0, [], 0)
+var customerPizza = new Pizza(pizzaSize, pizzaSauce, pizzaToppings)
+
+
 
 $(document).ready(function(){
   $("form#pizzaInput").submit(function(event){
     event.preventDefault();
     var pizzaSize = $("input:radio[name=pizzaSize]:checked").val();
-      inputToppings = []
+    var pizzaSauce = $("input:radio[name=pizzaSize]:checked").val();
+    var pizzaToppings = [];
     $("input:checkbox[name=pizzaToppings]:checked").each(function(){
-        var toppings = $(this).val();
-        customerPizza.push(inputToppings);
+        var pizzaToppings = $(this).val();
+        inputToppings.push(pizzaToppings);
       });
-      console.log(toppings)
+      
+      
+      console.log(pizzaToppings)
       console.log(pizzaSize)
+      console.log(pizzaSauce)
     });
   });
+
+ 

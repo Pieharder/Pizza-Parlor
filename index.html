@@ -13,50 +13,74 @@
 </head>
 
 <body>
+  <div class="jumbotron text-center">
+    <h1 id="jumboHeader">Live Free and Piehard!</h1>
+    <hr class="my-4">
+    <p>Yippee Ki-Yay</p>
+  </div>
   <div class="container">
     <div class="row">
       <div class="col-md-3">
         <!-- Empty Spacing Column -->
       </div>
+      <div class="col-md-6">
+        <form id="pizzaInput">
+          <div class="form-group">
+            <h3>Select your pizza size here:</h3>
+            <div class="radio">
+              <label>
+                <input type="radio" name="pizzaSize" value="6" checked>
+                Small 8" (6 slices) $6.00
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="pizzaSize" value="10">
+                Medium 12" (8 slices) $10.00
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="pizzaSize" value="16">
+                Large 14" (10 slices) $16.00
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <h4>Please select your toppings here:</h4>
+            <input type="checkbox" name="pizzaToppings" value="2">Pepperoni<br>
+            <input type="checkbox" name="pizzaToppings" value="2">Sausage<br>
+            <input type="checkbox" name="pizzaToppings" value="2">Onion<br>
+            <input type="checkbox" name="pizzaToppings" value="2">Bell Pepper<br>
+            <input type="checkbox" name="pizzaToppings" value="2">Salami<br>
+            <input type="checkbox" name="pizzaToppings" value="2">Mushroom<br>
+            <input type="checkbox" name="pizzaToppings" value="2">Garlic<br>
+            <input type="checkbox" name="pizzaToppings" value="2">Beef<br>
+            <input type="checkbox" name="pizzaToppings" value="2">Tomato<br>
+            <input type="checkbox" name="pizzaToppings" value="2">Chicken<br>
+          </div>
+          <button type="submit" class="btn btn-warning">Submit Order</button>
+        </form>
+      </div>
+      <div class="col-md-3">
+        <!-- Empty Spacing Column -->
+      </div>
     </div>
-    <div class="col-md-6">
-      <form id="formOne">
-        <div class="form-group">
-          <h3>Select your pizza size here:</h3>
-          <div class="radio">
-            <label>
-              <input type="radio" name="pizzaSize" value="medium" checked>
-              Small 8" (6 slices) $10.00
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="pizzaSize" value="medium">
-              Medium 12" (8 slices) $16.00
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="pizzaSize" value="Large">
-              Large 14" (10 slices) $20.00
-            </label>
+    <div class="row">
+      <div class="col-md-2">
+        <!-- Empty Spacing Column -->
+      </div>
+      <div class="col-md-8">
+        <div class="well">
+          <div class="results">
+
           </div>
         </div>
-        <div class="form-group">
-          <h4>Please select your toppings here:</h4>
-          <input type="checkbox" name="pizzaToppings" value="2">Pepperoni<br>
-          <input type="checkbox" name="pizzaToppings" value="2">Sausage<br>
-          <input type="checkbox" name="pizzaToppings" value="2">Onion<br>
-          <input type="checkbox" name="pizzaToppings" value="2">Bell Pepper<br>
-          <input type="checkbox" name="pizzaToppings" value="2">Salami<br>
-          <input type="checkbox" name="pizzaToppings" value="2">Mushroom<br>
-        </div>
-      </form>
+      </div>
+      <div class="col-md-2">
+        <!-- Empty Spacing Column -->
+      </div>
     </div>
-    <div class="col-md-3">
-      <!-- Empty Spacing Column -->
-    </div>
-  </div>
   </div>
 </body>
 

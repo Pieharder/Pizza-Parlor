@@ -28,8 +28,6 @@ Pizza.prototype.price = function() {
   } else if (this.size === "large") {
     totalPrice += 16;
   }
-
-  
   return totalPrice
 }
 
@@ -51,8 +49,19 @@ $(document).ready(function(){
         var selectedToppings = $(this).val();
         customerPizza.selectToppings(selectedToppings);
       });
-      
-      
+    var finalSize = pizzaSize
+    var finalSauce = pizzaSauce
+    var finalToppings = pizzaToppings.join()
+    var finalPrice = customerPizza.price()
+    
+    $("#finalPrice").html(finalPrice);
+    $("#finalToppings").html(finalToppings);
+    $("#finalSauce").html(finalSauce);
+    $("#finalSize").html(finalSize);
+
+
+
+
       console.log(pizzaToppings)
       console.log(pizzaSize)
       console.log(pizzaSauce)

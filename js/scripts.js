@@ -14,14 +14,17 @@ Pizza.prototype.size = function() {
 }
 
 
-Pizza.prototype.pizzaToppings
+Pizza.prototype.pizzaToppings = function () {
+  this.totalToppings = 0
+  for (var i = 0; i < this.toppings.length; i+= 1)
+    this.totalToppings += this.toppings[i]
+    console.log(totalToppings)
+    console.log(pizzaToppings)
+}
 
-
-
-Pizza.prototype.price
-
-
-
+Pizza.prototype.price = function() {
+  
+}
 
 
 
@@ -32,10 +35,10 @@ $(document).ready(function(){
   $("form#pizzaInput").submit(function(event){
     event.preventDefault();
     var pizzaSize = $("input:radio[name=pizzaSize]:checked").val();
-    var toppings = [];
+      inputToppings = []
     $("input:checkbox[name=pizzaToppings]:checked").each(function(){
-        var pizzaToppings = $(this).val();
-        toppings.push(pizzaToppings);
+        var toppings = $(this).val();
+        customerPizza.push(inputToppings);
       });
       console.log(toppings)
       console.log(pizzaSize)

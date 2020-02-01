@@ -16,32 +16,30 @@
   <div class="jumbotron text-center">
     <h1 id="jumboHeader">Live Free and Piehard!</h1>
     <hr class="my-4">
-    <p>Yippee Ki-Yay</p>
+    <p>Yippee Ki-Yay Pizza Lover</p>
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-3">
-        <!-- Empty Spacing Column -->
-      </div>
+      <div class="col-md-3"></div>
       <div class="col-md-6">
         <form id="pizzaInput">
           <div class="form-group">
             <h3>Select your pizza size here:</h3>
             <div class="radio">
               <label>
-                <input type="radio" name="pizzaSize" value="small" checked>
+                <input type="radio" name="pizzaSize" value="Small" checked>
                 Small 8" (6 slices) $6.00
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="pizzaSize" value="medium">
+                <input type="radio" name="pizzaSize" value="Medium">
                 Medium 12" (8 slices) $10.00
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="pizzaSize" value="large">
+                <input type="radio" name="pizzaSize" value="Large">
                 Large 14" (10 slices) $16.00
               </label>
             </div>
@@ -50,55 +48,51 @@
             <h3>Select your pizza sauce here:</h3>
             <div class="radio">
               <label>
-                <input type="radio" name="pizzaSauce" value="red" checked>
+                <input type="radio" name="pizzaSauce" value="Homemade Red" checked>
                 Homemade Slow Simmered Red Sauce!
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="pizzaSauce" value="white">
+                <input type="radio" name="pizzaSauce" value="Creamy White Garlic">
                 Creamy White Garlic Sauce!
               </label>
             </div>
           </div>
           <div class="form-group">
             <h4>Please select your toppings here:</h4>
-            <input type="checkbox" name="pizzaToppings" value="pepperoni">Pepperoni<br>
-            <input type="checkbox" name="pizzaToppings" value="sausage">Sausage<br>
-            <input type="checkbox" name="pizzaToppings" value="onion">Onion<br>
-            <input type="checkbox" name="pizzaToppings" value="bellPepper">Bell Pepper<br>
-            <input type="checkbox" name="pizzaToppings" value="salami">Salami<br>
-            <input type="checkbox" name="pizzaToppings" value="mushroom">Mushroom<br>
-            <input type="checkbox" name="pizzaToppings" value="garlic">Garlic<br>
-            <input type="checkbox" name="pizzaToppings" value="beef">Beef<br>
-            <input type="checkbox" name="pizzaToppings" value="tomato">Tomato<br>
-            <input type="checkbox" name="pizzaToppings" value="chicken">Chicken<br>
+            <input type="checkbox" name="pizzaToppings" value="Pepperoni">Pepperoni<br>
+            <input type="checkbox" name="pizzaToppings" value="Sausage">Sausage<br>
+            <input type="checkbox" name="pizzaToppings" value="Onion">Onion<br>
+            <input type="checkbox" name="pizzaToppings" value="BellPepper">Bell Pepper<br>
+            <input type="checkbox" name="pizzaToppings" value="Salami">Salami<br>
+            <input type="checkbox" name="pizzaToppings" value="Mushroom">Mushroom<br>
+            <input type="checkbox" name="pizzaToppings" value="Garlic">Garlic<br>
+            <input type="checkbox" name="pizzaToppings" value="Beef">Beef<br>
+            <input type="checkbox" name="pizzaToppings" value="Tomato">Tomato<br>
+            <input type="checkbox" name="pizzaToppings" value="Chicken">Chicken<br>
           </div>
           <button type="submit" class="btn btn-warning">Submit Order</button>
         </form>
       </div>
-      <div class="col-md-3">
-        <!-- Empty Spacing Column -->
-      </div>
+      <div class="col-md-3"></div>
     </div>
     <div class="row">
-      <div class="col-md-2">
-        <!-- Empty Spacing Column -->
-      </div>
+      <div class="col-md-2"></div>
       <div class="col-md-8">
-        <div class="well">
-          <div class="results">
-            <h3 id="finalSize"></h3>
-            <h3 id="finalSauce"></h3>
-            <h3><ul id="finalToppings">Toppings:</ul></h3>
-            <h2 id="finalPrice"></h2>
-
+        <div class="results">
+          <div class="well">
+            <div>
+              <h3>Size:</h3>
+                <p id="finalSize"></p>
+              <h3 id="finalSauce"></h3>
+              <h3><ul>Toppings:</ul></h3>
+              <h2 id="finalPrice"></h2>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-md-2">
-        <!-- Empty Spacing Column -->
-      </div>
+      <div class="col-md-2"></div>
     </div>
   </div>
 </body>

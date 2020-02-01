@@ -1,17 +1,9 @@
+// Business Logic (User doesn't see)
 function Pizza(size, sauce, toppings) {
   this.size = size;
   this.sauce = sauce;
   this.toppings = toppings
 }
-
-// Pizza.prototype.size = function() {
-//   if (this.size === "small") {
-//     this.price += 6;
-//   } else if (this.size === "medium") {
-//     this.price += 10;
-//   } else
-//     this.price += 16;
-// }
 
 
 Pizza.prototype.selectToppings = function (ingredients) {
@@ -30,14 +22,7 @@ Pizza.prototype.price = function() {
   }
   return totalPrice
 }
-
-
-
-
-
-
-
-
+// Front End Logic (User Sees)
 $(document).ready(function(){
   $("form#pizzaInput").submit(function(event){
     event.preventDefault();
@@ -46,9 +31,9 @@ $(document).ready(function(){
     var pizzaToppings = [];
     var customerPizza = new Pizza(pizzaSize, pizzaSauce, pizzaToppings);
     $("input:checkbox[name=pizzaToppings]:checked").each(function() {
-        var selectedToppings = $(this).val();
-        customerPizza.selectToppings(selectedToppings);
-      });
+      var selectedToppings = $(this).val();
+      customerPizza.selectToppings(selectedToppings);
+    });
  
     var finalSize = pizzaSize
     var finalSauce = pizzaSauce
@@ -57,15 +42,10 @@ $(document).ready(function(){
     
     $("#finalPrice").html(finalPrice);
     for (var i = 0; i < pizzaToppings.length; i += 1)
-      $("#finalToppings").append("<li>" + finalToppings[i] + "</li>")
+      $("#finalToppings").append("<li id='finalToppings'>" + finalToppings[i] + "</li>")
     $("#finalSauce").html(finalSauce);
     $("#finalSize").html(finalSize);
-
-
-
-
-      console.log(pizzaToppings)
-      console.log(pizzaSize)
-      console.log(pizzaSauce)
+    $(".results").show();
+    $("#pizzaInput").hide();
     });
   });

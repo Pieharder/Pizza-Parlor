@@ -1,6 +1,6 @@
 # _Pizza Parlor_
 
-#### _This is a webpage designed to accept custom pizza orders from the user._
+#### _Epicodus 2020 C#/React Cohort Constructor and Prototype Friday Project._
 
 #### By _**Geoff Goetz**  31 January 2020_
 
@@ -20,7 +20,8 @@ This project is was built with the purpose of accepting user inputs in the form 
 | Behavior   |      Input      |  Output |
 |------------|:---------------:|--------:|
 | Accept user inputs for topping selection via checkboxes | Pepperoni, sausage, olive selected | "Pepperoni, sausage and olives" displayed in list of toppings. |
-| Accept user inputs for pizza size via radio buttons | Medium Size button selected | "Medium(12 in)" size displayed in size section |
+| Accept user inputs for pizza size via radio buttons | Medium Size button selected | "Medium" size displayed in size section |
+| Accept user inputs for pizza sauce via radio buttons | Creamy White Garlic Sauce button selected | "Creamy White Garlic Sauce" displayed in order section |
 | Accept user submission for finalization of Pizza order via button. | User clicks submit button | Order price and all selections are displayed. |
 
 

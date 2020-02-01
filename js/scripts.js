@@ -49,13 +49,15 @@ $(document).ready(function(){
         var selectedToppings = $(this).val();
         customerPizza.selectToppings(selectedToppings);
       });
+ 
     var finalSize = pizzaSize
     var finalSauce = pizzaSauce
-    var finalToppings = pizzaToppings.join()
+    var finalToppings = pizzaToppings
     var finalPrice = customerPizza.price()
     
     $("#finalPrice").html(finalPrice);
-    $("#finalToppings").html(finalToppings);
+    for (var i = 0; i < pizzaToppings.length; i += 1)
+      $("#finalToppings").append("<li>" + finalToppings[i] + "</li>")
     $("#finalSauce").html(finalSauce);
     $("#finalSize").html(finalSize);
 
